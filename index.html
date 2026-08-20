@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Consulta de CEP</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- JavaScript -->
     <script src="js/script.js" defer></script>
-
 </head>
 
 <body>
@@ -24,41 +17,35 @@
 
         <section class="caixa1">
 
-            <header class="header">
+            <h1>Consulta de CEP</h1>
 
-                <h1>Consulta de CEP</h1>
-
-                <p>Digite um CEP para consultar o endereço.</p>
-
-            </header>
-
+            <p>Digite o CEP para encontrar o endereço.</p>
 
             <div class="formulario">
-
                 <div class="campo">
+                    <label for="campoTexto">CEP:</label>
 
-                    <label for="campoTexto">CEP :</label>
-
-                    <input type="text" id="campoTexto" class="input-cep" placeholder="Digite o CEP" maxlength="8">
-
+                    <input
+                        type="text"
+                        id="campoTexto"
+                        class="input-cep"
+                        placeholder="Digite o CEP"
+                        maxlength="8"
+                    >
                 </div>
 
-
                 <button type="button" id="btnConsultar" class="btn-consultar">
-                    Consultar CEP
+                    Consultar
                 </button>
-
 
                 <button type="button" id="btnLimpar" class="btn-limpar">
                     Limpar
                 </button>
             </div>
-            <div id="display" class="resultado">
-            </div>
+            
+            <div id="display" class="resultado"></div>
         </section>
-
     </main>
-
 </body>
 
 </html>
