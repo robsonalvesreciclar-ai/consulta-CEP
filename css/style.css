@@ -32,18 +32,17 @@ body {
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
-    background-color: black;
+    background: black;
     color: white;
     border: 2px solid gray;
     border-radius: 8px;
     font-size: 16px;
 }
 
-.btn-consultar {
+.btn-consultar,
+.btn-limpar {
     width: 100%;
     padding: 12px;
-    margin-top: 15px;
-    background-color: blue;
     color: white;
     border: none;
     border-radius: 8px;
@@ -51,16 +50,14 @@ body {
     font-weight: bold;
 }
 
+.btn-consultar {
+    margin-top: 15px;
+    background-color: blue;
+}
+
 .btn-limpar {
-    width: 100%;
-    padding: 12px;
     margin-top: 10px;
     background-color: gray;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .resultado {
@@ -71,5 +68,3 @@ body {
     color: white;
     border-radius: 8px;
 }
-
-

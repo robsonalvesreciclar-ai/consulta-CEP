@@ -5,37 +5,32 @@ const display = document.getElementById("display");
 
 btnConsultar.addEventListener("click", function () {
 
-    let cep = campoTexto.value;
-
-    if (cep == "") {
+    let cep = campoTexto.value.trim();
+    if (cep === "") {
         alert("Digite um CEP!");
         return;
     }
-
     let url = `https://viacep.com.br/ws/${cep}/json/`;
-
     fetch(url)
         .then(function (resposta) {
             return resposta.json();
         })
         .then(function (dados) {
-
             if (dados.erro) {
                 alert("CEP não encontrado!");
                 return;
             }
-
-            display.innerHTML = "CEP: " + dados.cep + "<br>";
-            display.innerHTML += "Logradouro: " + dados.logradouro + "<br>";
-            display.innerHTML += "Bairro: " + dados.bairro + "<br>";
-            display.innerHTML += "Cidade: " + dados.localidade + "<br>";
-            display.innerHTML += "Estado: " + dados.uf;
-
+            display.innerHTML =
+                "CEP: " + dados.cep + "<br>" +
+                "Logradouro: " + dados.logradouro + "<br>" +
+                "Bairro: " + dados.bairro + "<br>" +
+                "Cidade: " + dados.localidade + "<br>" +
+                "Estado: " + dados.uf;
             display.style.display = "block";
         });
 });
-btnLimpar.addEventListener("click", function () {
 
+btnLimpar.addEventListener("click", function () {
     campoTexto.value = "";
     display.innerHTML = "";
     display.style.display = "none";
