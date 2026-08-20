@@ -16,10 +16,6 @@ btnConsultar.addEventListener("click", function () {
             return resposta.json();
         })
         .then(function (dados) {
-            if (dados.erro) {
-                alert("CEP não encontrado!");
-                return;
-            }
             display.innerHTML =
                 "CEP: " + dados.cep + "<br>" +
                 "Logradouro: " + dados.logradouro + "<br>" +
